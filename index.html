@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -29,10 +29,47 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div class="row time-block">
+        <label class="col-md-1" for="text">9am</label>
+        <textarea class="hour col-md-10" id="toDo9" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">10am</label>
+        <textarea class="hour col-md-10" id="toDo10" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">11am</label>
+        <textarea class="hour col-md-10" id="toDo11" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">12pm/<br>noon</label>
+        <textarea class="hour col-md-10" id="toDo12" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">1pm</label>
+        <textarea class="hour col-md-10" id="toDo1" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">2pm</label>
+        <textarea class="hour col-md-10" id="toDo2" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">3pm</label>
+        <textarea class="hour col-md-10" id="toDO3" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">4pm</label>
+        <textarea class="hour col-md-10" id="toDo4" rows="3"></textarea>
+      </div>
+      <div class="row time-block">
+        <label class="col-md-1" for="text">5pm</label>
+        <textarea class="hour col-md-10" id="toDo5" rows="3"></textarea>
+      </div>
+      <button type="button" class="saveBtn">Save</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/JS/script.js"></script>
   </body>
 </html>
