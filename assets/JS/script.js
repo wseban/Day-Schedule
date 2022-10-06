@@ -114,49 +114,27 @@ function changeColor(){
     else{
         $(".description").attr("class", "past description col-10");
     }
-        // everything before 13 past everything after 13 future and 13 = present
     }
-
 
 
     
-
-
-/*for (i = 0; i < scheduleArr.length; i++){
-    if($(scheduleArr[i]).moment().format("H") === currentHour){
-        $(".hour").addClass("present").removeClass("future");
-    }
-    else if($(scheduleArr[i]).moment().format("H") > currentHour){
-        $(scheduleArr[i]).addClass("future").removeClass("past");
-    }
-    else{
-        $(scheduleArr[i]).addClass("present").removeClass("hour");
-    }
-}*/
 
 
 console.log(currentHour)
 
+function saveToStorage(event){
+    event.preventDefault();
+    var toDoList9 = $("#9").val();
+   localStorage.setItem("9am", JSON.stringify(toDoList9));
+}
+$("#save9").on("click", saveToStorage());
 
+///document.querySelector("#highScores").textContent = localStorage.getItem(initials.value, JSON.parse(localStorage.getItem(score)));
 
-$(".saveBtn9").on("submit", "#toDo9", function(e){
-    e.preventDefault();
-    var toDoList = localStorage.setItem("schedule9", JSON.stringify())
-})
-    
 
 //run a function that changes the class from past present and future based on the time
 //if 0000 to 9 all have class of future, 1700-2359 all have past 
 
-//$(function (){
-
-
-    
-//})
-//var startTime = moment().format(09:00:);
-
-//figure out moment.js and displaying current day... changing on new day
-// need to wrap everything in function and continuously run moment every hour or so...
 
 //utilize bootstrap to form time blocks within .container 9-5(standard business)
 //figure out how to integrate current time to show as colored blocks
