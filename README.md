@@ -1,7 +1,5 @@
 # Day-Schedule
 
-# Code Quiz
-
 ## Site Picture
 
 Deployed Link
@@ -37,33 +35,24 @@ The most effective lessons learned for me were...
 
 
 ## Code Snippets
+Bootstrap element
+```HTML
+<div class="container">
+      <div class="row time-block">
+        <label class="hour col-1" for="text">9am</label>
+        <textarea class="description col-10" id="9" rows="3"></textarea>
+        <button class="saveBtn col-1" id="save9">Save</button>
+      </div>
+```
 JavaScript
-```javaScript
-function questionTwo(event){
-    if(event.target.textContent === answer1){
-      score++;
-    }
-    else{
-        timeCount = timeCount - 5;
-    }
+```Javascript
+var updateSpace10 = JSON.parse(localStorage.getItem("10am", space10.val()))
+    space10.text(updateSpace10)
 
-function qTimer(){
-    timeRemaining = setInterval(function(){
-        timeCount--;
-        console.log(timeCount)
-        timerTracker.textContent = Math.floor(timeCount);
-        if (timeCount <= 0){
-            timeCount = 0;
-            clearInterval(timeRemaining);
-            endGame();
-        }
-    }, 1000)
-}
-
-startQuizBtn.removeEventListener("click", endQuiz);
-    startQuizBtn.addEventListener("click", begin);
-    startQuizBtn.textContent = "Again?"
-
+function saveToStorage10(event){
+    localStorage.setItem("10am", JSON.stringify($("#10").val()));
+ }
+ save10.on("click", saveToStorage10);
 ```
 ## Credits
 

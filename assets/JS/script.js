@@ -22,16 +22,45 @@ var hoursArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 var space9 = $("#9");
 var save9 = $("#save9");
 var space10 = $("#10");
+var save10 = $("#save10");
 var space11 = $("#11");
+var save11 = $("#save11");
 var space12 = $("#12");
+var save12 = $("#save12");
 var space13 = $("#13");
+var save13 = $("#save13");
 var space14 = $("#14");
+var save14 = $("#save14");
 var space15 = $("#15");
+var save15 = $("#save15");
 var space16 = $("#16");
+var save16 = $("#save16");
 var space17 = $("#17");
+var save17 = $("#save17");
 
 
 console.log(moment(currentHour))
+
+// if (localStorage.getItem("9am")){
+    var updateSpace9 = JSON.parse(localStorage.getItem("9am", space9.val()))
+    space9.text(updateSpace9)
+    var updateSpace10 = JSON.parse(localStorage.getItem("10am", space10.val()))
+    space10.text(updateSpace10)
+    var updateSpace11 = JSON.parse(localStorage.getItem("11am", space11.val()))
+    space11.text(updateSpace11)
+    var updateSpace12 = JSON.parse(localStorage.getItem("12pm", space12.val()))
+    space12.text(updateSpace12)
+    var updateSpace13 = JSON.parse(localStorage.getItem("1pm", space13.val()))
+    space13.text(updateSpace13)
+    var updateSpace14 = JSON.parse(localStorage.getItem("2pm", space14.val()))
+    space14.text(updateSpace14)
+    var updateSpace15 = JSON.parse(localStorage.getItem("3pm", space15.val()))
+    space15.text(updateSpace15)
+    var updateSpace16 = JSON.parse(localStorage.getItem("4pm", space16.val()))
+    space16.text(updateSpace16)
+    var updateSpace17 = JSON.parse(localStorage.getItem("5pm", space17.val()))
+    space17.text(updateSpace17)
+// }
 
 
 var currentHour = moment().format("H")// 16,17 etc
@@ -123,17 +152,46 @@ function changeColor(){
 
 
 
-function saveToStorage(event){
-   // event.preventDefault();
-    var toDoList9 = $("#9").val();
-   localStorage.setItem("9am", JSON.stringify(toDoList9));
+function saveToStorage9(event){
+   localStorage.setItem("9am", JSON.stringify($("#9").val()));
    console.log(space9.val())
-
-   //var updateSpace9 = localStorage.getItem("9am", JSON.parse(""))
-   //toDoList9 = updateSpace9
-
 }
-save9.on("click", saveToStorage);
+function saveToStorage10(event){
+    localStorage.setItem("10am", JSON.stringify($("#10").val()));
+ }
+ function saveToStorage11(event){
+    localStorage.setItem("11am", JSON.stringify($("#11").val()));
+ }
+ function saveToStorage12(event){
+    localStorage.setItem("12pm", JSON.stringify($("#12").val()));
+ }
+ function saveToStorage13(event){
+    localStorage.setItem("1pm", JSON.stringify($("#13").val()));
+ }
+ function saveToStorage14(event){
+    localStorage.setItem("2pm", JSON.stringify($("#14").val()));
+ }
+ function saveToStorage15(event){
+    localStorage.setItem("3pm", JSON.stringify($("#15").val()));
+ }
+ function saveToStorage16(event){
+    localStorage.setItem("4pm", JSON.stringify($("#16").val()));
+ }
+ function saveToStorage17(event){
+    localStorage.setItem("5pm", JSON.stringify($("#17").val()));
+ }
+
+ save9.on("click", saveToStorage9);
+ save10.on("click", saveToStorage10);
+ save11.on("click", saveToStorage11);
+ save12.on("click", saveToStorage12);
+ save13.on("click", saveToStorage13);
+ save14.on("click", saveToStorage14);
+ save15.on("click", saveToStorage15);
+ save16.on("click", saveToStorage16);
+ save17.on("click", saveToStorage17);
+
+
 
 ///document.querySelector("#highScores").textContent = localStorage.getItem(initials.value, JSON.parse(localStorage.getItem(score)));
 
