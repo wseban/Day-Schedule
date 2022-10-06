@@ -20,6 +20,7 @@ $("#currentDay").text(today);
 //var am9 = 
 var hoursArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 var space9 = $("#9");
+var save9 = $("#save9");
 var space10 = $("#10");
 var space11 = $("#11");
 var space12 = $("#12");
@@ -39,29 +40,29 @@ function changeColor(){
     if (currentHour < 9){
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 9){
+    else if (currentHour == 9){
         $("#9").attr("class", "present  col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 10){
+    else if (currentHour == 10){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-     else if (currentHour === 11){
+     else if (currentHour == 11){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 12){
+    else if (currentHour == 12){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
         $("#12").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 13){
+    else if (currentHour == 13){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
@@ -69,7 +70,7 @@ function changeColor(){
         $("#13").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour ===  14){
+    else if (currentHour ==  14){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
@@ -78,7 +79,7 @@ function changeColor(){
         $("#14").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour ===15){
+    else if (currentHour == 15){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
@@ -88,7 +89,7 @@ function changeColor(){
         $("#15").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 16){
+    else if (currentHour == 16){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
@@ -99,7 +100,7 @@ function changeColor(){
         $("#16").attr("class", "present col-10");
         $(".description").attr("class", "future description col-10");
     }
-    else if (currentHour === 17){
+    else if (currentHour == 17){
         $("#9").attr("class", "past col-10");
         $("#10").attr("class", "past col-10");
         $("#11").attr("class", "past col-10");
@@ -120,14 +121,19 @@ function changeColor(){
     
 
 
-console.log(currentHour)
+
 
 function saveToStorage(event){
-    event.preventDefault();
+   // event.preventDefault();
     var toDoList9 = $("#9").val();
    localStorage.setItem("9am", JSON.stringify(toDoList9));
+   console.log(space9.val())
+
+   //var updateSpace9 = localStorage.getItem("9am", JSON.parse(""))
+   //toDoList9 = updateSpace9
+
 }
-$("#save9").on("click", saveToStorage());
+save9.on("click", saveToStorage);
 
 ///document.querySelector("#highScores").textContent = localStorage.getItem(initials.value, JSON.parse(localStorage.getItem(score)));
 

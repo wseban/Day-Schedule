@@ -5,7 +5,7 @@
 ## Site Picture
 
 Deployed Link
-https://wseban.github.io/Code-Quiz/
+https://wseban.github.io/Day-Schedule/
 
 ## Usage
 The user is presented with the current day of the week and date in the header.  Within the body they are presented with fill in text boxes that are color coordinated to show whether that hour has past or not...
@@ -14,8 +14,8 @@ The user is presented with the current day of the week and date in the header.  
 
 ## Technologies Used
 - Bootstrap - a third party API with pre designed elements advancing the range of style on a webpage.
-- Jquery - a third party API that assists in condensing Javascript and allowing more versatility.
-- moment.js - a third party API that allows formatting and manipulation of current time stamps.
+- jQuery - a third party API that assists in condensing Javascript and allowing more versatility.
+- Moment.js - a third party API that allows formatting and manipulation of current time stamps.
 - JavaScript - Allows developer to make static webpages, dynamic and interactive.  For this exercise it was used to alter the original webpage to change the questions, change   the answers, add a dynamic timer/countdown(that also ends the game), as well as, allow saving of scores.
 - HTML - Gives a basic static structure to the webpage.
 - CSS - Allows the developer to make the webpage a little more appealing.
